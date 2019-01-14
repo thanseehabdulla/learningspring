@@ -20,4 +20,11 @@
       <property name = "message3" value = "Namaste India!"/>
    </bean>
 
+ <!-- Definition for textEditor bean using inner bean -->
+	 <bean id = "textEditor" class = "com.tutorialspoint.TextEditor">
+      <property name = "spellChecker">
+         <bean id = "spellChecker" class = "com.tutorialspoint.SpellChecker"/>
+      </property>
+   </bean>
+
 </beans>

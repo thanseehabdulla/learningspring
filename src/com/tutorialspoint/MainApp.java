@@ -20,6 +20,9 @@ public class MainApp {
       objC.getMessage2();
       objC.getMessage3();
       
+      TextEditor te = (TextEditor) context.getBean("textEditor");
+      te.spellCheck();
+      
       ((AbstractApplicationContext) context).registerShutdownHook();
    }
 }
