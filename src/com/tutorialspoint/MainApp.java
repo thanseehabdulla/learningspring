@@ -14,6 +14,12 @@ public class MainApp {
       HelloWorld objB = (HelloWorld) context.getBean("helloWorld");
       objB.setMessage("Thanseeh");
       objB.getMessage();
+      
+      HelloIndia objC = (HelloIndia) context.getBean("helloIndia");
+      objC.getMessage1();
+      objC.getMessage2();
+      objC.getMessage3();
+      
       ((AbstractApplicationContext) context).registerShutdownHook();
    }
 }
