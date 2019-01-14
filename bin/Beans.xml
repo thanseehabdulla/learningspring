@@ -81,4 +81,8 @@
    <bean id = "cStartEventHandler" class = "com.tutorialspoint.CStartEventHandler"/>
    <bean id = "cStopEventHandler" class = "com.tutorialspoint.CStopEventHandler"/>
 
+	<bean id = "customEventHandler" class = "com.tutorialspoint.CustomEventHandler"/>
+   <bean id = "customEventPublisher" class = "com.tutorialspoint.CustomEventPublisher"/>
+
+
 </beans>

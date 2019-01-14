@@ -50,6 +50,12 @@ public static void main(String[] args) {
    // Let us raise a stop event.
       ((AbstractApplicationContext) context).stop();
       
+      CustomEventPublisher cvp = 
+    	         (CustomEventPublisher) context.getBean("customEventPublisher");
+    	      
+    	      cvp.publish();  
+    	      cvp.publish();
+      
       ((AbstractApplicationContext) context).registerShutdownHook();
    }
 }
