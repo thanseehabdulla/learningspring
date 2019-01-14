@@ -1,6 +1,7 @@
 package com.tutorialspoint;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainApp {
@@ -8,5 +9,11 @@ public class MainApp {
       ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
       HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
       obj.getMessage();
+      
+      
+      HelloWorld objB = (HelloWorld) context.getBean("helloWorld");
+      objB.setMessage("Thanseeh");
+      objB.getMessage();
+      ((AbstractApplicationContext) context).registerShutdownHook();
    }
 }
